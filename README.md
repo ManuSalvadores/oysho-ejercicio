@@ -1,31 +1,52 @@
-# Instrucciones para correr el proyecto:
+# Ejercicio E2E Oysho
 
-Se utiliza la version #v18.18.2 de node.
-Se utiliza la version #v13.5.1 de cypress.
+Este repositorio contiene pruebas end-to-end (E2E) para el sitio web de Oysho. A continuación, se detallan los pasos necesarios para la instalación y ejecución de las pruebas, así como una descripción de la estructura del proyecto.
 
-Encontraran en devDependencies eslint y prettier como herramientas para facilitar el desarrollo.
+## Requisitos de Instalación
 
-# Comandos a utilizar
+- Node.js
+- npm
 
-Instalar dependencias utilizando el comando **npm i**
+## Instrucciones de Instalación
+
+1. Clona el repositorio: `git clone https://github.com/ManuSalvadores/oysho-ejercicio.git`
+2. Instala las dependencias: `npm install`
+
+## Uso
 
 Para correr los test utilizando el entorno gráfico de cypress, se encuentra disponible el siguiente comando:
-**npm run cypress:open**
 
-O bien utilizar **npx cypress run** para correr los test por consola unicamente.
+`npm run cypress:open`
 
-# Estructura del proyecto
+O bien
 
-Dentro de la carpeta cypress/e2e se encuentran los test divididos por la page correspondiente.
+`npx cypress run` para correr los test por consola unicamente.
 
-Dentro de la carpeta cypress/support se encuentra el file commands.js el cual utilicé para definir algunos comandos personalizados.
+## Estructura del Proyecto
 
-En primer lugar cree la función gherkinSyntax, la cual utiliza este concepto originario del Behavior Driven Development (BDD) que en este caso busca un mejor entendimiento de los tests a través de logs en el entorno gráfico de cypress.
+Dentro de la carpeta cypress/e2e se encuentran los tests, divididos por la página correspondiente.
 
-Por otro lado, se define la función visitPage la cual utiliza un switch para centralizar el routing de las web a visitar desde los distintos test.
+Dentro de la carpeta cypress/support se encuentra el archivo commands.js, donde se definen algunos comandos personalizados.
 
-# Propuestas
+La función gherkinSyntax utiliza el concepto originario del Behavior Driven Development (BDD) para proporcionar un mejor entendimiento de los tests a través de logs en el entorno gráfico de Cypress.
 
-Si bien este es un ejercicio que testea directamente contra producción, sería ideal desde el lado de desarrollo, poder incluir distintos mocks que permitan realizar pruebas más exhaustivas o bien testear en distintas resoluciones.
-También agregar una función de login dentro de commands.js que permita loguear con un user funcional y crear casos de testing que cubran los escenarios posibles una vez que el usuario se encuentra logueado correctamente.
-Por último tambien se podría agregar typescript como una herramienta más de control durante el desarrollo.
+La función visitPage centraliza el routing hacia las distintas páginas web desde los diferentes tests.
+
+## Propuestas de Mejora
+
+A pesar de que este ejercicio realiza pruebas directamente contra el entorno de producción, tengo algunas propuestas para mejorarlo:
+
+Mocks y Entornos de Desarrollo:
+
+Incluir mocks que permitan pruebas más exhaustivas.
+Establecer entornos de desarrollo para facilitar la ejecución de pruebas en diferentes contextos.
+
+Función de Login:
+
+Agregar una función de login en commands.js para simular el inicio de sesión con un usuario funcional.
+Crear casos de prueba que cubran escenarios una vez que el usuario está autenticado correctamente.
+
+Integración de TypeScript:
+
+Considerar la incorporación de TypeScript para mejorar el control durante el desarrollo.
+Este proyecto proporciona una base sólida, y estas sugerencias pueden llevarlo al siguiente nivel para garantizar pruebas más completas y robustas.
