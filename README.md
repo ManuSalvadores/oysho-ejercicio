@@ -20,7 +20,7 @@ Para correr los test utilizando el entorno gráfico de cypress, se encuentra dis
 
 O bien
 
-`npx cypress run` para correr los test por consola unicamente.
+`npm cypress run` para correr los test por consola unicamente.
 
 ## Estructura del Proyecto
 
@@ -32,7 +32,7 @@ La función gherkinSyntax utiliza el concepto originario del Behavior Driven Dev
 
 La función visitPage centraliza el routing hacia las distintas páginas web desde los diferentes tests.
 
-## Propuestas de Mejora
+# Propuestas de Mejora
 
 A pesar de que este ejercicio realiza pruebas directamente contra el entorno de producción, tengo algunas propuestas para mejorarlo:
 
