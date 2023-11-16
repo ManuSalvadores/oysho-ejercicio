@@ -1,0 +1,17 @@
+{
+  "name": "oysho-ejercicio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.5.1",
+    "eslint": "^8.53.0",
+    "prettier": "^3.1.0"
+  }
+}
