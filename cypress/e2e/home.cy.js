@@ -61,7 +61,7 @@ describe("Tests over Oysho Home Page", () => {
 
     it("Should open sidebar when clicking menu icon", () => {
       cy.gherkinSyntax("then", "user clicks sidebar button");
-      cy.get(sidebarButton).click();
+      cy.get(sidebarButton).first().click();
       cy.wait(1000);
       cy.get(sidebar).should("be.visible");
     });

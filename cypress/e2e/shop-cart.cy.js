@@ -19,13 +19,16 @@ describe("Tests over Oysho's Shop Cart", () => {
     });
 
     it("Should open collapsible promotions menu and throw error modal when filling with wrong data", () => {
+      cy.gherkinSyntax("and", "User clicks promotions collapsible menu");
       cy.get(collapsiblePromotions).click();
       cy.wait(1000);
 
+      cy.gherkinSyntax("and", "User fills with wrong data");
       cy.get(promotionsTextInput).type("123456");
       cy.get(promotionsButton).click();
       cy.wait(1000);
 
+      cy.gherkinSyntax("then", "User gets error modal");
       cy.contains(
         "Se ha producido un error, por favor recargue la página"
       ).should("exist");
