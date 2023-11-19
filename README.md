@@ -50,3 +50,5 @@ Integración de TypeScript:
 
 Considerar la incorporación de TypeScript para mejorar el control durante el desarrollo.
 Este proyecto proporciona una base sólida, y estas sugerencias pueden llevarlo al siguiente nivel para garantizar pruebas más completas y robustas.
+
+En este momento, los test en github actions no son estables ya que setea la cookie la primera vez que se corren. Luego el boton de aceptar las cookeis deja de existir, para solucionarlo se debería setear las cookies previamente en cypress para que ambos entornos se encuentren coordinados.
