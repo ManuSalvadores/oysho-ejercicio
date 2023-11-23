@@ -33,3 +33,19 @@ Cypress.Commands.add("visitPage", (page) => {
       break;
   }
 });
+
+var myVar = 1;
+console.log(myVar);
+// console.log(myLet)
+// console.log(myConst)
+
+// let myLet = 2
+// const myConst = 3
+
+const ordenarYsumar = (numbers) => {
+  numbers.sort((a, b) => a - b);
+
+  return numbers[0] + numbers[numbers.length - 1];
+};
+
+console.log(ordenarYsumar([5, 1, 4, 10, 8]));
